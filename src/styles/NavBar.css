@@ -1,0 +1,24 @@
+:root {
+	--background-color-nav: grey;
+}
+
+.navbar-main {
+	background-color: var(--background-color-nav);
+	width: inherit;
+	height: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar-icons-container {
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.navbar-icon {
+	font-size: 26px;
+	cursor: pointer;
+}

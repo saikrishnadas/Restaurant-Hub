@@ -5,6 +5,7 @@
 
 .main {
 	display: flex;
+	font-family: "Poppins", sans-serif;
 }
 
 .navbar-container {
@@ -13,7 +14,6 @@
 }
 
 .body-container {
-	background-color: red;
 	width: calc(100vw - var(--nav-bar-width));
 	height: var(--main-height);
 }

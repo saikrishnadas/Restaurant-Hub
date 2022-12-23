@@ -1,5 +1,16 @@
 .header-main {
 	width: inherit;
 	height: 4rem;
-	background-color: aqua;
+}
+
+.logo-main {
+	height: inherit;
+	display: flex;
+	align-items: center;
+}
+
+.logo-image {
+	width: 20rem;
+	height: 3rem;
+	object-fit: contain;
 }

@@ -1,0 +1,14 @@
+.menu-main {
+	margin-left: 6%;
+}
+
+.tabs {
+	color: black;
+	font-family: "Poppins", sans-serif;
+}
+
+.ant-tabs .ant-tabs-ink-bar {
+	background-color: green;
+	height: 3px !important;
+	border-radius: 10px;
+}

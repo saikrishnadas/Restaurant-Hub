@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Menu.css";
 import { Tabs } from "antd";
 import Category from "./Category";
+import Foods from "./Foods";
 
 function Menu() {
 	const onChange = (key) => {
@@ -21,7 +22,12 @@ function Menu() {
 							</span>
 						),
 						key: "1",
-						children: <Category />,
+						children: (
+							<span style={{ display: "flex" }}>
+								<Category />
+								<Foods />
+							</span>
+						),
 					},
 					{
 						label: (

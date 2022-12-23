@@ -1,0 +1,11 @@
+.foods-main {
+	margin-left: 20px;
+	/* background-color: red; */
+	width: 74%;
+}
+
+.card-main {
+	margin-top: 20px;
+	display: flex;
+	gap: 20px;
+}

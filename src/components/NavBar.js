@@ -6,13 +6,18 @@ import {
 	SettingFilled,
 	UserOutlined,
 } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 function NavBar() {
 	return (
 		<div className="navbar-main">
 			<div className="navbar-icons-container">
-				<PieChartFilled className="navbar-icon" />
-				<ShoppingFilled className="navbar-icon" />
+				<Link to="/">
+					<PieChartFilled className="navbar-icon" />
+				</Link>
+				<Link to="/menu">
+					<ShoppingFilled className="navbar-icon" />
+				</Link>
 				<SettingFilled className="navbar-icon" />
 				<UserOutlined className="navbar-icon" />
 			</div>

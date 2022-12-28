@@ -1,11 +1,34 @@
 .foods-main {
 	margin-left: 20px;
 	/* background-color: red; */
-	width: 74%;
+	width: 76%;
 }
 
 .card-main {
+	/* background-color: red; */
+	max-height: 60vh;
+	overflow-y: scroll;
 	margin-top: 20px;
-	display: flex;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
 	gap: 20px;
+}
+
+.card-main::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+.card-main::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+.card-main::-webkit-scrollbar-thumb {
+	background: #706d6d;
+}
+
+/* Handle on hover */
+.card-main::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }

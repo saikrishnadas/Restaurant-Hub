@@ -1,0 +1,24 @@
+.orders-main {
+	margin-left: 6%;
+	height: 90vh;
+	overflow-y: scroll;
+}
+
+.orders-main::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+.orders-main::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+.orders-main::-webkit-scrollbar-thumb {
+	background: #706d6d;
+}
+
+/* Handle on hover */
+.orders-main::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

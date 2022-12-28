@@ -16,11 +16,7 @@ function Menu() {
 				onChange={onChange}
 				items={[
 					{
-						label: (
-							<span className="tabs" style={{ marginRight: "50px" }}>
-								Category
-							</span>
-						),
+						label: <span className="tabs">Category</span>,
 						key: "1",
 						children: (
 							<span style={{ display: "flex" }}>
@@ -30,11 +26,7 @@ function Menu() {
 						),
 					},
 					{
-						label: (
-							<span className="tabs" style={{ marginLeft: "50px" }}>
-								Modifiers
-							</span>
-						),
+						label: <span className="tabs">Modifiers</span>,
 						key: "2",
 						children: `Content of Tab Pane 2`,
 					},

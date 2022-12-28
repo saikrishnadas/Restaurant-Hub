@@ -11,7 +11,7 @@ function Food() {
 		<Card
 			bordered={false}
 			style={{
-				width: 300,
+				width: 200,
 			}}
 			cover={<img alt="food-img" src={pizza} />}
 			// actions={[

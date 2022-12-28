@@ -11,6 +11,11 @@ function Foods() {
 			</div>
 			<div className="card-main">
 				<Food />
+				<Food />
+				<Food />
+				<Food />
+				<Food />
+				<Food />
 			</div>
 		</div>
 	);

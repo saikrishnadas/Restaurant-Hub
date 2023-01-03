@@ -46,7 +46,7 @@ function Category() {
 			<span className="category-header">
 				<span>Category</span>
 				{inputVisble ? (
-					<span onClick={() => setInputVisible(true)}>
+					<span>
 						<input
 							type="text"
 							placeholder="Category Name"

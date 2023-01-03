@@ -1,11 +1,11 @@
 import React, { useMemo } from "react";
 import { useTable } from "react-table";
 import MOCK_DATA from "../MOCK_DATA.json";
-import { COLUMNS } from "../common/columns";
+import { COLUMNS_COMPLETED } from "../common/columnsCompleted";
 import "../styles/Table.css";
 
-function OpenOrders({ orders }) {
-	const columns = useMemo(() => COLUMNS, []);
+function CompletedOrders({ orders }) {
+	const columns = useMemo(() => COLUMNS_COMPLETED, []);
 	const data = useMemo(() => orders, [orders]);
 
 	const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
@@ -41,4 +41,4 @@ function OpenOrders({ orders }) {
 	);
 }
 
-export default OpenOrders;
+export default CompletedOrders;

@@ -1,10 +1,13 @@
-import { format } from "date-fns";
+import { doc, updateDoc } from "@firebase/firestore";
+import { db } from "./firebase-config";
+
+const handleCompleteOrder = async (value) => {
+	const orderDoc = doc(db, "orders", value); //value here is the id of the order
+	const newData = { status: "completed" };
+	await updateDoc(orderDoc, newData);
+};
 
 export const COLUMNS = [
-	{
-		Header: "Id",
-		accessor: "id",
-	},
 	{
 		Header: "Customer Name",
 		accessor: "customer_name",
@@ -12,18 +15,22 @@ export const COLUMNS = [
 	{
 		Header: "Order Time",
 		accessor: "order_time",
-		// Cell: ({ value }) => {
-		// 	return format(new Date(value), "dd/MM/yyyy");
-		// },
 	},
 	{
 		Header: "Amount",
 		accessor: "amount",
 	},
 	{
+		Header: "Status",
+		accessor: "status",
+	},
+	{
 		Header: "Action",
+		accessor: "id",
 		Cell: ({ value }) => {
-			return <button>Complete</button>;
+			return (
+				<button onClick={() => handleCompleteOrder(value)}>Complete</button>
+			);
 		},
 	},
 ];

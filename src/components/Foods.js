@@ -52,6 +52,7 @@ function Foods() {
 				{menu &&
 					menu.map((item) => (
 						<Food
+							id={item.id}
 							title={item.title}
 							description={item.description}
 							price={item.price}

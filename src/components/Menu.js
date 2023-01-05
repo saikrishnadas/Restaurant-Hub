@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Menu.css";
 import { Tabs } from "antd";
 import Category from "./Category";
@@ -28,7 +28,7 @@ function Menu() {
 					{
 						label: <span className="tabs">Modifiers</span>,
 						key: "2",
-						children: `Content of Tab Pane 2`,
+						children: `No Modifiers`,
 					},
 				]}
 			/>

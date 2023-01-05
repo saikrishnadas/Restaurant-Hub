@@ -1,33 +1,37 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Foods.css";
-import { EditFilled } from "@ant-design/icons";
+import { EditFilled, PlusCircleFilled } from "@ant-design/icons";
 import Food from "./Food";
 import { getDocs, collection, doc, updateDoc } from "@firebase/firestore";
 import { db } from "../common/firebase-config";
 import { useSelector } from "react-redux";
+import AddFood from "./AddFood";
 
 function Foods() {
 	const [inputVisible, setInputVisible] = useState(false);
 	const [name, setName] = useState(false);
 	const menu = useSelector((state) => state.menuList.menuList);
+	const [isAddModal, setIsAddModal] = useState(false);
 	const selectedCategory = useSelector(
 		(state) => state.category.selectedCategory
 	);
-	// const categoryCollectionRef = collection(db, "category");
 
-	// useEffect(() => {
-	// 	const getMenuItems = async () => {
-	// 		const data = await getDocs(menuCollectionRef);
-	// 		const menuItems = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-	// 		setMenu(menuItems);
-	// 	};
-	// 	getMenuItems();
-	// }, []);
 	const handleCategoryUpdate = async () => {
 		const categoryDoc = doc(db, "category", selectedCategory.id);
 		const newData = { name: name };
 		await updateDoc(categoryDoc, newData);
 	};
+
+	const showModal = () => {
+		setIsAddModal(true);
+	};
+	const handleOk = () => {
+		setIsAddModal(false);
+	};
+	const handleCancel = () => {
+		setIsAddModal(false);
+	};
+
 	return (
 		<div className="foods-main">
 			{inputVisible ? (
@@ -45,6 +49,10 @@ function Foods() {
 						style={{ color: "blue" }}
 						onClick={() => setInputVisible(true)}
 					/>
+					<PlusCircleFilled
+						style={{ color: "red", cursor: "pointer", marginLeft: "10px" }}
+						onClick={showModal}
+					/>
 				</div>
 			)}
 
@@ -59,6 +67,11 @@ function Foods() {
 						/>
 					))}
 			</div>
+			<AddFood
+				isAddModal={isAddModal}
+				handleOk={handleOk}
+				handleCancel={handleCancel}
+			/>
 		</div>
 	);
 }
